@@ -2,7 +2,7 @@
   <code>p-token</code>
 </h1>
 <p align="center">
-  <img width="400" alt="p-token" src="[Untitled-2dada-Photoroom](https://github.com/user-attachments/assets/1599a006-5ebb-4890-9135-1141f6c7109c)"/>!
+  <img width="400" alt="p-token" src="https://cdn.discordapp.com/attachments/1338980181163118602/1338981163745808518/Untitled-2dada-Photoroom.png?ex=67ad0ee2&is=67abbd62&hm=2970497a7ec57f7d5e6db702a5cfb5c42d4d96ec714bebf742e767ecf063dd61&"/>!
 
 </p>
 <p align="center">
