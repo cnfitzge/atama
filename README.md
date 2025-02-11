@@ -27,8 +27,39 @@ cargo add atama
 ```
 This will add `atama` as a dependency to your program.
 
+## Defining the program entrypoint
+A Solana program needs to define an entrypoint, which will be called by the runtime to begin the program execution. The `entrypoint!` macro emits the common boilerplate to set up the program entrypoint.
+To use the entrypoint! macro, use the following in your entrypoint definition:
+```bash
+use atama::{
+  account_info::AccountInfo,
+  entrypoint,
+  msg,
+  ProgramResult,
+  pubkey::Pubkey
+};
 
+entrypoint!(process_instruction);
 
+pub fn process_instruction(
+  program_id: &Pubkey,
+  accounts: &[AccountInfo],
+  instruction_data: &[u8],
+) -> ProgramResult {
+  msg!("Hello from my program!");
+  Ok(())
+}
+```
+The information from the input is parsed into their own entities:
+* `program_id`: the `ID` of the program being called
+* `accounts`: the accounts received
+* `instruction_data`: data for the instruction
+`atama` also offers variations of the program entrypoint (`lazy_program_allocator`) and global allocator (`no_allocator`). In order to use these, the program needs to specify the program entrypoint, global allocator and panic handler individually. The `entrypoint!` macro is equivalent to writing:
+```bash
+program_entrypoint!(process_instruction);
+default_allocator!();
+default_panic_handler!();
+```
 
 
 
