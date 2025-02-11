@@ -54,12 +54,7 @@ The information from the input is parsed into their own entities:
 * `program_id`: the `ID` of the program being called
 * `accounts`: the accounts received
 * `instruction_data`: data for the instruction
-`atama` also offers variations of the program entrypoint (`lazy_program_allocator`) and global allocator (`no_allocator`). In order to use these, the program needs to specify the program entrypoint, global allocator and panic handler individually. The `entrypoint!` macro is equivalent to writing:
-```bash
-program_entrypoint!(process_instruction);
-default_allocator!();
-default_panic_handler!();
-```
+
 
 
 
