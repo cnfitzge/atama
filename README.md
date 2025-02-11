@@ -5,8 +5,7 @@
   <img width="400" alt="p-token" src="https://github.com/user-attachments/assets/ba1c5f0d-db2f-457d-8f7e-e62fd564e5e7" />
 </p>
 <p align="center">
-  A <code>pinocchio</code>-based Token program.
-</p>
+.
 
 <p align="center">
   <a href="https://github.com/febo/p-token/actions/workflows/main.yml"><img src="https://img.shields.io/github/actions/workflow/status/febo/p-token/main.yml?logo=GitHub" /></a>
