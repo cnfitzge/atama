@@ -2,7 +2,8 @@
   <code>p-token</code>
 </h1>
 <p align="center">
-  <img width="400" alt="p-token" src="https://github.com/user-attachments/assets/ba1c5f0d-db2f-457d-8f7e-e62fd564e5e7" />
+  <img width="400" alt="p-token" src="[Untitled-2dada-Photoroom](https://github.com/user-attachments/assets/1599a006-5ebb-4890-9135-1141f6c7109c)"/>!
+
 </p>
 <p align="center">
 .
