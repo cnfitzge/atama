@@ -17,6 +17,7 @@ Atama is an automated engine designed to optimize Solana programs in Rust via ma
 ## Features
 
 - Fully autonomous and `no_std` crate
+- Efficient `entrypoint!` macro – no copies or allocations
 - Improved optimization in cross-program invocations
 
 ## Getting started
