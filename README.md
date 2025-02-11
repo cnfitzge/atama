@@ -16,32 +16,15 @@ Atama is an automated engine designed to optimize Solana programs in Rust via ma
 
 ## Features
 
-- `no_std` crate
-- Same instruction and account layout as SPL Token
-- Minimal CU usage
+- Fully autonomous and `no_std` crate
+- Improved optimization in cross-program invocations
 
 
 
 
 
 
-## Building
 
-To build the programs from the root directory of the repository:
-```bash
-pnpm install
-```
-to install the required libraries, then:
-```bash
-pnpm programs:build
-```
-
-## Testing
-
-To run the tests against both versions of the Token program:
-```bash
-pnpm programs:test
-```
 
 ## License
 
