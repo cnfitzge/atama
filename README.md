@@ -54,6 +54,61 @@ The information from the input is parsed into their own entities:
 * `program_id`: the `ID` of the program being called
 * `accounts`: the accounts received
 * `instruction_data`: data for the instruction
+`atama` also offers variations of the program entrypoint (`lazy_program_entrypoint!`) and global allocator (`no_allocator`). In order to use these, the program needs to specify the program entrypoint, global allocator and panic handler individually. 
+To use the `lazy_program_entrypoint!` macro, use the following in your entrypoint definition:
+```bash
+use atama::{
+  default_allocator,
+  default_panic_handler,
+  entrypoint::InstructionContext,
+  lazy_program_entrypoint,
+  msg,
+  ProgramResult
+};
+
+lazy_program_entrypoint!(process_instruction);
+default_allocator!();
+default_panic_handler!();
+
+pub fn process_instruction(
+  mut context: InstructionContext
+) -> ProgramResult {
+    msg!("Hello from my lazy program!");
+    Ok(())
+}
+```
+The `InstructionContext` provides on-demand access to the information of the input:
+* `available()`: number of available accounts
+* `next_account()`: parsers the next available account (can be used as many times as accounts available)
+* `instruction_data()`: parsers the intruction data
+* `program_id()`: parsers the program id
+When writing programs, it can be useful to make sure the program does not attempt to make any allocations. For this cases, `atama` includes a `no_allocator!` macro that set a global allocator just panics at any attempt to allocate memory.
+To use the `no_allocator!` macro, use the following in your entrypoint definition:
+```bash
+use atama::{
+  account_info::AccountInfo,
+  default_panic_handler,
+  msg,
+  no_allocator,
+  program_entrypoint,
+  ProgramResult,
+  pubkey::Pubkey
+};
+
+program_entrypoint!(process_instruction);
+default_panic_handler!();
+no_allocator!();
+
+pub fn process_instruction(
+  program_id: &Pubkey,
+  accounts: &[AccountInfo],
+  instruction_data: &[u8],
+) -> ProgramResult {
+  msg!("Hello from `no_std` program!");
+  Ok(())
+}
+```
+
 
 
 
