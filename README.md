@@ -109,6 +109,37 @@ pub fn process_instruction(
 }
 ```
 
+## Advance entrypoint configuration
+The symbols emitted by the entrypoint macros — program entrypoint, global allocator and default panic handler — can only be defined once globally. If the program crate is also intended to be use as a library, it is common practice to define a Cargo feature in your program crate to conditionally enable the module that includes the `entrypoint!` macro invocation. The convention is to name the feature `bpf-entrypoint`.
+```bash
+#[cfg(feature = "bpf-entrypoint")]
+mod entrypoint {
+  use pinocchio::{
+    account_info::AccountInfo,
+    entrypoint,
+    msg,
+    ProgramResult,
+    pubkey::Pubkey
+  };
+
+  entrypoint!(process_instruction);
+
+  pub fn process_instruction(
+    program_id: &Pubkey,
+    accounts: &[AccountInfo],
+    instruction_data: &[u8],
+  ) -> ProgramResult {
+    msg!("Hello from my program!");
+    Ok(())
+  }
+}
+```
+When building the program binary, you must enable the `bpf-entrypoint` feature:
+```bash
+cargo build-sbf --features bpf-entrypoint
+```
+
+
 
 
 
