@@ -22,11 +22,9 @@ This repository contains a **proof-of-concept** of a reimplementation of the SPL
 - Same instruction and account layout as SPL Token
 - Minimal CU usage
 
-## Status
 
-- [x] Account and Mint
-- [x] Instructions
-- [x] Basic instruction tests
+
+
 
 
 ## Building
