@@ -29,7 +29,7 @@ This repository contains a **proof-of-concept** of a reimplementation of the SPL
 - [x] Basic instruction tests
 - [ ] Existing SPL Token tests
 
-## Compute Units
+## Compute Unit Measurements
 
 | Instruction                | Completed | CU (`p-token`) | CU (`spl-token`) |
 |----------------------------|-----------|----------------|------------------|
