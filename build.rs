@@ -14,3 +14,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let idl_source_path = current_dir.join("res/drift.json");
     let idl_mod_path = current_dir.join("crates/src/tangent_idl.rs");
     generate_idl_types(&idl_source_path, idl_mod_path.as_path())?;
+
+ // Only build FFI lib if static or no lib path provided
+    if should_build_from_source() {
+        build_ffi_lib(&current_dir)?;
