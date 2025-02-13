@@ -2,7 +2,7 @@
   <code>atama</code>
 </h1>
 <p align="center">
-  <img width="400" alt="p-token" src="https://cdn.discordapp.com/attachments/1338980181163118602/1338981163745808518/Untitled-2dada-Photoroom.png?ex=67ad0ee2&is=67abbd62&hm=2970497a7ec57f7d5e6db702a5cfb5c42d4d96ec714bebf742e767ecf063dd61&"/>
+  <img width="400" alt="atama" src="https://cdn.discordapp.com/attachments/1339000430495268958/1339735217593913384/Tag222.png?ex=67afcd26&is=67ae7ba6&hm=71137b4482b16c2831c98f5a7b7b931bc91a91ef28f580f382326283ce8bf760&"/>
 
 </p>
 <p align="center">
