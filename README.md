@@ -6,7 +6,7 @@
 
 </p>
 <p align="center">
-AI engine for Solana program optimization
+Solana program optimization
 
 
 
